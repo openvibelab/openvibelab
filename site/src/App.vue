@@ -1,5 +1,6 @@
 <script setup>
 import { computed } from 'vue'
+import { Analytics } from '@vercel/analytics/vue'
 import config from './data/config.json'
 import HeroSection from './components/HeroSection.vue'
 import AboutSection from './components/AboutSection.vue'
@@ -19,6 +20,7 @@ const currentDay = computed(() => {
 </script>
 
 <template>
+  <Analytics />
   <div class="min-h-screen">
     <HeroSection :currentDay="currentDay" />
     <AboutSection />
