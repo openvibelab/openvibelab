@@ -4,8 +4,8 @@
 
 **一个人发起，所有人参与。**
 
-[![100 Days Challenge](https://img.shields.io/badge/🔥_100天_Vibe_Coding-进行中-ff6b35?style=for-the-badge)](./PROJECTS.md)
-[![Projects](https://img.shields.io/badge/已完成-0%2F100-blue?style=for-the-badge)](./PROJECTS.md)
+[![Website](https://img.shields.io/badge/🌐_openvibelab.com-在线访问-ff6b35?style=for-the-badge)](https://openvibelab.com)
+[![100 Days Challenge](https://img.shields.io/badge/🔥_100天_Vibe_Coding-进行中-blue?style=for-the-badge)](./PROJECTS.md)
 [![Submit Idea](https://img.shields.io/badge/💡_我有个想法-提需求-success?style=for-the-badge)](https://github.com/openvibelab/openvibelab/issues/new?template=project-request.yml)
 
 <br>
@@ -28,7 +28,7 @@
 
 - **需求来自你** — 你生活中、工作中觉得"要是有这个就好了"的东西，告诉我
 - **代码完全公开** — 每一行都在 GitHub 上，随便看、随便学、随便拿去用
-- **做出来就能用** — 项目部署在国内可访问的地址，不用翻墙，打开就用
+- **做出来就能用** — 项目部署在 [openvibelab.com](https://openvibelab.com) 下，国内直接访问，打开就用
 - **不限形态** — 以 Web 为主，但工具、脚本、小程序、API，什么好用做什么
 - **好项目一起做大** — 社区反响好的项目，会认真打磨，上线小程序、App，甚至正式运营
 
@@ -146,6 +146,7 @@ openvibelab/
 
 | 平台 | 链接 |
 |:-----|:-----|
+| 🌐 官网 | [openvibelab.com](https://openvibelab.com) |
 | 🐙 GitHub | [github.com/openvibelab](https://github.com/openvibelab) |
 | 📺 B站 | *即将开通* |
 | 📕 小红书 | *即将开通* |

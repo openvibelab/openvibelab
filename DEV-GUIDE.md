@@ -120,7 +120,8 @@ chore    构建/工具
 ## 部署要求
 
 - **国内可直接访问**，这是硬性要求
-- 推荐子域名格式：`xxx.openvibelab.com`
+- 统一使用子域名：`{项目名}.openvibelab.com`（如 `todo.openvibelab.com`）
+- 部署平台：Vercel（主力） / Cloudflare Pages（备选）
 - HTTPS 必须
 - 考虑 CDN 加速，保证访问速度
 

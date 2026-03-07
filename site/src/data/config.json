@@ -1,0 +1,16 @@
+{
+  "title": "OpenVibeLab",
+  "tagline": "100天 Vibe Coding · 100个开源项目",
+  "subtitle": "你说你想要什么，我把它做出来。",
+  "startDate": "2026-03-08",
+  "totalDays": 100,
+  "totalProjects": 100,
+  "links": {
+    "github": "https://github.com/openvibelab",
+    "issueNew": "https://github.com/openvibelab/openvibelab/issues/new?template=project-request.yml",
+    "issueList": "https://github.com/openvibelab/openvibelab/issues",
+    "bilibili": "",
+    "xiaohongshu": "",
+    "wechat": ""
+  }
+}
