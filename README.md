@@ -62,7 +62,7 @@
 
 | # | 项目 | 一句话描述 | 状态 | 链接 |
 |:-:|:-----|:----------|:---:|:----:|
-| — | 等你来提第一个需求！ | — | — | — |
+| 001 | AI 吵架评理 | 输入争吵内容，AI 客观评理谁有道理 | 🟢 | [体验](https://judge.openvibelab.com) · [repo](https://github.com/openvibelab/100-day-001-ai-judge) |
 
 <!--END_PROJECTS_TABLE-->
 
@@ -160,7 +160,7 @@ openvibelab/
 
 <br>
 
-`Day 0 / 100` · 一切刚刚开始
+`Day 1 / 100` · 第一个项目已上线！
 
 ---
 

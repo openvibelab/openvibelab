@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "id": 1,
+    "name": "AI 吵架评理",
+    "slug": "ai-judge",
+    "description": "输入争吵内容，AI 客观评理谁有道理。支持完整描述和多方视角两种模式。",
+    "status": "live",
+    "tech": ["Vue 3", "Tailwind", "Vercel Edge"],
+    "repo": "https://github.com/openvibelab/100-day-001-ai-judge",
+    "url": "https://judge.openvibelab.com",
+    "date": "2026-03-08",
+    "day": 1
+  }
+]
