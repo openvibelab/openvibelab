@@ -3,15 +3,16 @@ import { ref, computed } from 'vue'
 import ProjectCard from './ProjectCard.vue'
 import projects from '../data/projects.json'
 import config from '../data/config.json'
+import { t } from '../lib/i18n.js'
 
 const activeFilter = ref('all')
 
-const filters = [
-  { key: 'all', label: '全部' },
-  { key: 'live', label: '已上线' },
-  { key: 'dev', label: '开发中' },
-  { key: 'queued', label: '排队中' },
-]
+const filters = computed(() => [
+  { key: 'all', label: t('filterAll') },
+  { key: 'live', label: t('filterLive') },
+  { key: 'dev', label: t('filterDev') },
+  { key: 'queued', label: t('filterQueued') },
+])
 
 const filtered = computed(() => {
   if (activeFilter.value === 'all') return projects
@@ -24,8 +25,8 @@ const hasProjects = computed(() => projects.length > 0)
 <template>
   <section id="projects" class="py-24 px-6 bg-gray-50/50">
     <div class="max-w-6xl mx-auto">
-      <h2 class="section-title">项目展示</h2>
-      <p class="section-subtitle">每一个都是社区的想法变成了现实</p>
+      <h2 class="section-title">{{ t('projectsTitle') }}</h2>
+      <p class="section-subtitle">{{ t('projectsSubtitle') }}</p>
 
       <!-- filters -->
       <div v-if="hasProjects" class="flex justify-center gap-2 mb-12">
@@ -51,12 +52,12 @@ const hasProjects = computed(() => projects.length > 0)
       <!-- empty state -->
       <div v-else class="text-center py-20">
         <div class="text-6xl mb-6">🚀</div>
-        <h3 class="text-2xl font-bold text-gray-800 mb-3">还没有项目</h3>
+        <h3 class="text-2xl font-bold text-gray-800 mb-3">{{ t('projectsEmpty') }}</h3>
         <p class="text-gray-500 mb-8 max-w-md mx-auto">
-          第一个需求等你来提。你的想法可能就是第一个被实现的项目。
+          {{ t('projectsEmptyDesc') }}
         </p>
         <a :href="config.links.issueNew" target="_blank" class="btn-primary">
-          💡 提交第一个需求
+          {{ t('projectsEmptyCta') }}
         </a>
       </div>
     </div>

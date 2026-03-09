@@ -1,15 +1,18 @@
 <script setup>
+import { computed } from 'vue'
+import { t } from '../lib/i18n.js'
+
 defineProps({
   project: { type: Object, required: true }
 })
 
-const statusMap = {
-  live:     { label: '已上线', color: 'bg-green-100 text-green-700' },
-  dev:      { label: '开发中', color: 'bg-blue-100 text-blue-700' },
-  queued:   { label: '排队中', color: 'bg-yellow-100 text-yellow-700' },
-  paused:   { label: '已暂停', color: 'bg-gray-100 text-gray-500' },
-  upgraded: { label: '已升级', color: 'bg-brand-orange/10 text-brand-orange' },
-}
+const statusMap = computed(() => ({
+  live:     { label: t('statusLive'), color: 'bg-green-100 text-green-700' },
+  dev:      { label: t('statusDev'), color: 'bg-blue-100 text-blue-700' },
+  queued:   { label: t('statusQueued'), color: 'bg-yellow-100 text-yellow-700' },
+  paused:   { label: t('statusPaused'), color: 'bg-gray-100 text-gray-500' },
+  upgraded: { label: t('statusUpgraded'), color: 'bg-brand-orange/10 text-brand-orange' },
+}))
 </script>
 
 <template>
@@ -32,8 +35,8 @@ const statusMap = {
 
     <!-- tech -->
     <div class="flex flex-wrap gap-1.5 mb-4">
-      <span v-for="t in project.tech" :key="t" class="text-xs px-2 py-0.5 rounded-md bg-gray-50 text-gray-500">
-        {{ t }}
+      <span v-for="tech in project.tech" :key="tech" class="text-xs px-2 py-0.5 rounded-md bg-gray-50 text-gray-500">
+        {{ tech }}
       </span>
     </div>
 
@@ -41,11 +44,11 @@ const statusMap = {
     <div class="flex gap-3 pt-3 border-t border-gray-50">
       <a v-if="project.url" :href="project.url" target="_blank"
         class="text-sm text-brand-orange hover:text-brand-orange-light font-medium transition-colors">
-        在线体验 →
+        {{ t('cardTry') }}
       </a>
       <a v-if="project.repo" :href="project.repo" target="_blank"
         class="text-sm text-gray-400 hover:text-gray-600 font-medium transition-colors">
-        源码
+        {{ t('cardSource') }}
       </a>
     </div>
   </div>

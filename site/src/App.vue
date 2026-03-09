@@ -10,6 +10,7 @@ import StatsSection from './components/StatsSection.vue'
 import ParticipateSection from './components/ParticipateSection.vue'
 import CtaSection from './components/CtaSection.vue'
 import FooterSection from './components/FooterSection.vue'
+import LangToggle from './components/LangToggle.vue'
 
 const currentDay = computed(() => {
   const start = new Date(config.startDate)
@@ -21,6 +22,9 @@ const currentDay = computed(() => {
 
 <template>
   <Analytics />
+  <div class="fixed top-4 right-4 z-50">
+    <LangToggle />
+  </div>
   <div class="min-h-screen">
     <HeroSection :currentDay="currentDay" />
     <AboutSection />

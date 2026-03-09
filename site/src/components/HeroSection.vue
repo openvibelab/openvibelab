@@ -1,6 +1,7 @@
 <script setup>
 import { computed } from 'vue'
 import config from '../data/config.json'
+import { t } from '../lib/i18n.js'
 
 const props = defineProps({
   currentDay: { type: Number, default: 0 }
@@ -26,21 +27,21 @@ const progress = computed(() => Math.min((props.currentDay / config.totalDays) *
 
       <!-- headline -->
       <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-        100天 <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-brand-teal">Vibe Coding</span><br>
-        100个开源项目
+        {{ t('heroDays') }} <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-brand-teal">Vibe Coding</span><br>
+        {{ t('heroCount') }}
       </h1>
 
       <p class="text-xl md:text-2xl text-gray-400 mb-10 max-w-2xl mx-auto">
-        {{ config.subtitle }}
+        {{ t('heroSubtitle') }}
       </p>
 
       <!-- CTA -->
       <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
         <a :href="config.links.issueNew" target="_blank" class="btn-primary text-lg">
-          💡 我有个想法
+          {{ t('heroIdea') }}
         </a>
         <a href="#projects" class="btn-secondary !border-gray-600 !text-gray-300 hover:!border-brand-teal hover:!text-brand-teal text-lg">
-          看看项目 ↓
+          {{ t('heroProjects') }}
         </a>
       </div>
 

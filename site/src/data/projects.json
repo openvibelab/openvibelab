@@ -1,9 +1,9 @@
 [
   {
     "id": 1,
-    "name": "AI 吵架评理",
+    "name": "AI Argument Judge",
     "slug": "ai-judge",
-    "description": "输入争吵内容，AI 客观评理谁有道理。支持完整描述和多方视角两种模式。",
+    "description": "Submit an argument, AI judges who's right. Supports single narrator and multi-party modes.",
     "status": "live",
     "tech": ["Vue 3", "Tailwind", "Vercel Edge"],
     "repo": "https://github.com/openvibelab/100-day-001-ai-judge",
@@ -15,11 +15,11 @@
     "id": 2,
     "name": "IELTS Story Adapter",
     "slug": "ielts-story",
-    "description": "写一次个人故事，AI 帮你适配到任意雅思口语 Part 2 话题。140+ 真题库，React Flow 思维导图。",
-    "status": "dev",
+    "description": "Write one personal story, AI adapts it to any IELTS Speaking Part 2 topic. 140+ real cue cards, mind map visualization.",
+    "status": "live",
     "tech": ["Next.js 14", "TypeScript", "Tailwind", "React Flow"],
     "repo": "https://github.com/openvibelab/100-day-002-ielts-story",
-    "url": "",
+    "url": "https://ielts.openvibelab.com",
     "date": "2026-03-09",
     "day": 2
   }

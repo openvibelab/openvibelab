@@ -1,15 +1,16 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import stats from '../data/stats.json'
+import { t } from '../lib/i18n.js'
 
-const items = [
-  { label: '个项目', value: stats.totalProjects, icon: '📦' },
-  { label: '已上线', value: stats.liveProjects, icon: '🟢' },
-  { label: '社区需求', value: stats.communityRequests, icon: '💡' },
-  { label: '贡献者', value: stats.contributors, icon: '👥' },
-]
+const items = computed(() => [
+  { label: t('statsProjects'), value: stats.totalProjects, icon: '📦' },
+  { label: t('statsLive'), value: stats.liveProjects, icon: '🟢' },
+  { label: t('statsRequests'), value: stats.communityRequests, icon: '💡' },
+  { label: t('statsContributors'), value: stats.contributors, icon: '👥' },
+])
 
-const displayed = ref(items.map(() => 0))
+const displayed = ref(items.value.map(() => 0))
 const sectionRef = ref(null)
 
 function animateNumbers() {
@@ -19,7 +20,7 @@ function animateNumbers() {
   function step(now) {
     const progress = Math.min((now - start) / duration, 1)
     const ease = 1 - Math.pow(1 - progress, 3)
-    items.forEach((item, i) => {
+    items.value.forEach((item, i) => {
       displayed.value[i] = Math.floor(item.value * ease)
     })
     if (progress < 1) requestAnimationFrame(step)

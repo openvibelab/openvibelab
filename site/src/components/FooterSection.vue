@@ -1,12 +1,14 @@
 <script setup>
+import { computed } from 'vue'
 import config from '../data/config.json'
+import { t } from '../lib/i18n.js'
 
-const socialLinks = [
+const socialLinks = computed(() => [
   { name: 'GitHub', url: config.links.github, icon: 'github' },
-  { name: 'B站', url: config.links.bilibili, icon: 'bilibili' },
-  { name: '小红书', url: config.links.xiaohongshu, icon: 'xiaohongshu' },
-  { name: '微信公众号', url: config.links.wechat, icon: 'wechat' },
-]
+  { name: t('footerBilibili'), url: config.links.bilibili, icon: 'bilibili' },
+  { name: t('footerXiaohongshu'), url: config.links.xiaohongshu, icon: 'xiaohongshu' },
+  { name: t('footerWechat'), url: config.links.wechat, icon: 'wechat' },
+])
 </script>
 
 <template>
@@ -37,7 +39,7 @@ const socialLinks = [
           </a>
           <span v-else
             class="w-10 h-10 rounded-full bg-gray-800/50 flex items-center justify-center text-gray-600 cursor-not-allowed"
-            :title="link.name + '（即将开通）'"
+            :title="link.name + ' ' + t('footerComingSoon')"
           >
             <span class="text-xs font-bold">{{ link.name[0] }}</span>
           </span>
@@ -45,7 +47,7 @@ const socialLinks = [
       </div>
 
       <!-- tagline -->
-      <p class="text-gray-500 text-sm mb-2">一个人发起，所有人参与。</p>
+      <p class="text-gray-500 text-sm mb-2">{{ t('footerTagline') }}</p>
       <p class="text-gray-600 text-xs">
         MIT License · openvibelab.com
       </p>

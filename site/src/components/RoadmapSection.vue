@@ -1,18 +1,21 @@
 <script setup>
-const steps = [
-  { icon: '💡', title: '社区提需求', desc: '你说你想要什么' },
-  { icon: '🔵', title: '快速开发', desc: '1-3 天做出 MVP' },
-  { icon: '🟢', title: '上线可用', desc: '部署到 openvibelab.com' },
-  { icon: '👥', title: '社区共建', desc: '反馈 + PR 贡献' },
-  { icon: '⭐', title: '正式产品', desc: '小程序 / App / 持续运营' },
-]
+import { computed } from 'vue'
+import { t } from '../lib/i18n.js'
+
+const steps = computed(() => [
+  { icon: '💡', title: t('roadmapStep1'), desc: t('roadmapStep1Desc') },
+  { icon: '🔵', title: t('roadmapStep2'), desc: t('roadmapStep2Desc') },
+  { icon: '🟢', title: t('roadmapStep3'), desc: t('roadmapStep3Desc') },
+  { icon: '👥', title: t('roadmapStep4'), desc: t('roadmapStep4Desc') },
+  { icon: '⭐', title: t('roadmapStep5'), desc: t('roadmapStep5Desc') },
+])
 </script>
 
 <template>
   <section class="py-24 px-6 bg-brand-dark">
     <div class="max-w-5xl mx-auto">
-      <h2 class="section-title !text-white">项目进化路线</h2>
-      <p class="section-subtitle !text-gray-400">每个项目都有机会从一个想法变成一个真正的产品</p>
+      <h2 class="section-title !text-white">{{ t('roadmapTitle') }}</h2>
+      <p class="section-subtitle !text-gray-400">{{ t('roadmapSubtitle') }}</p>
 
       <!-- desktop: horizontal -->
       <div class="hidden md:flex items-start justify-between relative mt-8">
@@ -45,7 +48,7 @@ const steps = [
       </div>
 
       <p class="text-center text-gray-500 mt-12 text-sm max-w-lg mx-auto">
-        大部分项目会停在 MVP 阶段，这很正常。但那些真正击中需求的项目，我们会把它做成真正的产品。参与过贡献的人，就是共创者。
+        {{ t('roadmapNote') }}
       </p>
     </div>
   </section>
