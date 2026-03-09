@@ -1,8 +1,8 @@
 blank_issues_enabled: true
 contact_links:
-  - name: "📋 查看项目列表"
+  - name: "📋 Project List / 项目列表"
     url: "https://github.com/openvibelab/openvibelab/blob/main/PROJECTS.md"
-    about: "看看目前有哪些项目在做"
-  - name: "📐 开发规范"
+    about: "See all current projects / 看看目前有哪些项目在做"
+  - name: "📐 Dev Guide / 开发规范"
     url: "https://github.com/openvibelab/openvibelab/blob/main/DEV-GUIDE.md"
-    about: "了解项目的开发标准和命名规则"
+    about: "Development standards and naming conventions / 了解项目的开发标准和命名规则"

@@ -1,0 +1,75 @@
+name: "💡 Submit Project Request"
+description: "Tell me what project you want — I'll build it!"
+title: "[Request] "
+labels: ["request", "to-evaluate"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Thanks for submitting a request! 🎉
+        No technical knowledge needed — just tell me what you want.
+
+  - type: input
+    id: project-name
+    attributes:
+      label: "Project Name"
+      description: "Give your idea a name"
+      placeholder: "e.g.: AI Weekly Report Generator"
+    validations:
+      required: true
+
+  - type: textarea
+    id: one-liner
+    attributes:
+      label: "One-liner"
+      description: "Describe what it is and what it does in one sentence"
+      placeholder: "e.g.: Enter a week's work, automatically generate a formatted weekly report"
+    validations:
+      required: true
+
+  - type: textarea
+    id: detail
+    attributes:
+      label: "Details"
+      description: "What features should it have? What problem does it solve? Who would use it?"
+      placeholder: |
+        - What's the core feature?
+        - What pain point does it solve?
+        - What should it look like?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reference
+    attributes:
+      label: "References"
+      description: "Any similar products or screenshots for reference? (optional)"
+      placeholder: "Links, screenshots, or text descriptions all work"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: "Project Type"
+      description: "What category does it roughly fall into?"
+      options:
+        - "🛠️ Tool (productivity, calculator, converter, etc.)"
+        - "🎮 Entertainment (games, interactive experiences, etc.)"
+        - "📊 Data (visualization, statistics, analysis, etc.)"
+        - "📝 Content (editor, notes, blog, etc.)"
+        - "🤖 AI (AI-assisted, smart generation, etc.)"
+        - "🎨 Design (color palette, image processing, etc.)"
+        - "💬 Social (chat, collaboration, etc.)"
+        - "📚 Learning (tutorials, exercises, quizzes, etc.)"
+        - "🔧 Other"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: "Confirmation"
+      options:
+        - label: "I understand this project will be open source (MIT license) and anyone can use and modify it"
+          required: true

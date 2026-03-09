@@ -1,0 +1,49 @@
+name: "🐛 Bug Report"
+description: "Report an issue with a project"
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: input
+    id: project
+    attributes:
+      label: "Which project?"
+      description: "Name or number of the affected project"
+      placeholder: "e.g.: 100-day-001-ai-judge"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description"
+      description: "What happened?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Steps to reproduce"
+      description: "How can we reproduce the issue?"
+      placeholder: |
+        1. Open the page
+        2. Click xxx
+        3. See xxx
+    validations:
+      required: false
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: "Expected behavior"
+      description: "What should have happened instead?"
+    validations:
+      required: false
+
+  - type: input
+    id: browser
+    attributes:
+      label: "Browser"
+      placeholder: "Chrome 120 / Safari 17 / etc."
+    validations:
+      required: false
