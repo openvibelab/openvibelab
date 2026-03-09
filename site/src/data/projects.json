@@ -10,5 +10,17 @@
     "url": "https://judge.openvibelab.com",
     "date": "2026-03-08",
     "day": 1
+  },
+  {
+    "id": 2,
+    "name": "IELTS Story Adapter",
+    "slug": "ielts-story",
+    "description": "写一次个人故事，AI 帮你适配到任意雅思口语 Part 2 话题。140+ 真题库，React Flow 思维导图。",
+    "status": "dev",
+    "tech": ["Next.js 14", "TypeScript", "Tailwind", "React Flow"],
+    "repo": "https://github.com/openvibelab/100-day-002-ielts-story",
+    "url": "",
+    "date": "2026-03-09",
+    "day": 2
   }
 ]
