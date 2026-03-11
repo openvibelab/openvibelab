@@ -29,6 +29,7 @@
 |:-:|:------|:----------|:------|:---:|:---:|:-------:|:-------:|
 | 001 | AI 吵架评理 | 输入争吵内容，AI 客观评理谁有道理 | Vue 3 · Tailwind · Vercel Edge · Supabase | 🟢 | [repo](https://github.com/openvibelab/100-day-001-ai-judge) | [体验](https://judge.openvibelab.com) | 2026-03-08 |
 | 002 | IELTS Story Adapter | 写一次故事，AI 适配到任意雅思 Part 2 话题 | Next.js 14 · TypeScript · Tailwind · React Flow | 🟢 | [repo](https://github.com/openvibelab/100-day-002-ielts-story) | [体验](https://ielts.openvibelab.com) | 2026-03-09 |
+| 003 | 测测你是哪款AI | 20题随机测试+6大专项深度挑战，看你的知识量约等于哪个AI | Vue 3 · Tailwind · Vite | 🟢 | [repo](https://github.com/openvibelab/100-day-003-ai-brain-match) | [体验](https://brain.openvibelab.com) | 2026-03-11 |
 
 <!--
 新增项目时复制这行：
@@ -40,10 +41,10 @@
 ## 进度统计
 
 ```
-总计：    2 / 100
-━━━━━━━━━━━━━━━━━━━━ 2%
+总计：    3 / 100
+━━━━━━━━━━━━━━━━━━━━ 3%
 
-已上线  🟢  2
+已上线  🟢  3
 开发中  🔵  0
 排队中  🟡  0
 已暂停  ⚪  0

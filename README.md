@@ -66,6 +66,7 @@ Each project is an experiment: can we build something people actually use, in th
 |:-:|:--------|:-----------|:---:|:----:|
 | 001 | AI Argument Judge | Submit an argument, AI judges who's right | 🟢 | [Try it](https://judge.openvibelab.com) · [repo](https://github.com/openvibelab/100-day-001-ai-judge) |
 | 002 | IELTS Story Adapter | Write one story, AI adapts it to any IELTS topic | 🟢 | [Try it](https://ielts.openvibelab.com) · [repo](https://github.com/openvibelab/100-day-002-ielts-story) |
+| 003 | AI Brain Match | 20 random questions + 6 specialty deep dives — which AI matches your brain? | 🟢 | [Try it](https://brain.openvibelab.com) · [repo](https://github.com/openvibelab/100-day-003-ai-brain-match) |
 
 <!--END_PROJECTS_TABLE-->
 
@@ -163,7 +164,7 @@ openvibelab/
 
 <br>
 
-`Day 2 / 100` · Two projects live!
+`Day 3 / 100` · Three projects live!
 
 ---
 

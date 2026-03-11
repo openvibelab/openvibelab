@@ -22,5 +22,17 @@
     "url": "https://ielts.openvibelab.com",
     "date": "2026-03-09",
     "day": 2
+  },
+  {
+    "id": 3,
+    "name": "AI Brain Match",
+    "slug": "ai-brain-match",
+    "description": "20 random questions across 7 categories — find out which AI model matches your knowledge level. 6 specialty deep-dive modes, 142 questions total.",
+    "status": "live",
+    "tech": ["Vue 3", "Tailwind", "Vite"],
+    "repo": "https://github.com/openvibelab/100-day-003-ai-brain-match",
+    "url": "https://brain.openvibelab.com",
+    "date": "2026-03-11",
+    "day": 3
   }
 ]
