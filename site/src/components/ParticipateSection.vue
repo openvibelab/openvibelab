@@ -4,43 +4,27 @@ import { t } from '../lib/i18n.js'
 </script>
 
 <template>
-  <section class="py-24 px-6 bg-gray-50/50">
+  <section class="py-24 px-6" style="background: #f0ece4;">
     <div class="max-w-5xl mx-auto">
-      <h2 class="section-title">{{ t('participateTitle') }}</h2>
-      <p class="section-subtitle">{{ t('participateSubtitle') }}</p>
+      <h2 class="section-title text-left">{{ t('participateTitle') }}</h2>
+      <p class="section-subtitle text-left mx-0">{{ t('participateSubtitle') }}</p>
 
-      <div class="grid md:grid-cols-2 gap-8">
+      <div class="grid md:grid-cols-2 gap-6">
         <!-- non-coders -->
-        <div class="p-8 rounded-3xl bg-white border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+        <div class="p-8 rounded-xl border-2" style="border-color: #d9d0c3; background: #fffcf7;">
           <div class="text-4xl mb-4">💡</div>
-          <h3 class="text-xl font-bold mb-4">{{ t('participateNoCoder') }}</h3>
+          <h3 class="text-xl font-bold mb-4" style="font-family: Sora, sans-serif;">{{ t('participateNoCoder') }}</h3>
           <ul class="space-y-3">
-            <li class="flex items-start gap-3">
-              <span class="w-6 h-6 rounded-full bg-brand-orange/10 text-brand-orange flex items-center justify-center text-sm shrink-0 mt-0.5">1</span>
+            <li v-for="(item, i) in [
+              { title: t('participateSubmit'), desc: t('participateSubmitDesc') },
+              { title: t('participateVote'), desc: t('participateVoteDesc') },
+              { title: t('participateFeedback'), desc: t('participateFeedbackDesc') },
+              { title: t('participateSpread'), desc: t('participateSpreadDesc') },
+            ]" :key="i" class="flex items-start gap-3">
+              <span class="w-6 h-6 rounded-lg flex items-center justify-center text-sm shrink-0 mt-0.5 font-bold" style="background: rgba(230, 92, 46, 0.08); color: #e65c2e;">{{ i + 1 }}</span>
               <div>
-                <span class="font-medium">{{ t('participateSubmit') }}</span>
-                <span class="text-gray-500"> — {{ t('participateSubmitDesc') }}</span>
-              </div>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="w-6 h-6 rounded-full bg-brand-orange/10 text-brand-orange flex items-center justify-center text-sm shrink-0 mt-0.5">2</span>
-              <div>
-                <span class="font-medium">{{ t('participateVote') }}</span>
-                <span class="text-gray-500"> — {{ t('participateVoteDesc') }}</span>
-              </div>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="w-6 h-6 rounded-full bg-brand-orange/10 text-brand-orange flex items-center justify-center text-sm shrink-0 mt-0.5">3</span>
-              <div>
-                <span class="font-medium">{{ t('participateFeedback') }}</span>
-                <span class="text-gray-500"> — {{ t('participateFeedbackDesc') }}</span>
-              </div>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="w-6 h-6 rounded-full bg-brand-orange/10 text-brand-orange flex items-center justify-center text-sm shrink-0 mt-0.5">4</span>
-              <div>
-                <span class="font-medium">{{ t('participateSpread') }}</span>
-                <span class="text-gray-500"> — {{ t('participateSpreadDesc') }}</span>
+                <span class="font-medium" style="color: #1e1a14;">{{ item.title }}</span>
+                <span style="color: #6d6358;"> — {{ item.desc }}</span>
               </div>
             </li>
           </ul>
@@ -50,40 +34,24 @@ import { t } from '../lib/i18n.js'
         </div>
 
         <!-- coders -->
-        <div class="p-8 rounded-3xl bg-brand-dark text-white">
+        <div class="p-8 rounded-xl" style="background: #1e1a14;">
           <div class="text-4xl mb-4">🛠️</div>
-          <h3 class="text-xl font-bold mb-4">{{ t('participateCoder') }}</h3>
+          <h3 class="text-xl font-bold mb-4" style="color: #faf8f4; font-family: Sora, sans-serif;">{{ t('participateCoder') }}</h3>
           <ul class="space-y-3">
-            <li class="flex items-start gap-3">
-              <span class="w-6 h-6 rounded-full bg-brand-teal/20 text-brand-teal flex items-center justify-center text-sm shrink-0 mt-0.5">1</span>
+            <li v-for="(item, i) in [
+              { title: t('participatePR'), desc: t('participatePRDesc') },
+              { title: t('participateBug'), desc: t('participateBugDesc') },
+              { title: t('participateFeature'), desc: t('participateFeatureDesc') },
+              { title: t('participateCore'), desc: t('participateCoreDesc') },
+            ]" :key="i" class="flex items-start gap-3">
+              <span class="w-6 h-6 rounded-lg flex items-center justify-center text-sm shrink-0 mt-0.5 font-bold" style="background: rgba(42, 125, 111, 0.15); color: #3a9e8c;">{{ i + 1 }}</span>
               <div>
-                <span class="font-medium">{{ t('participatePR') }}</span>
-                <span class="text-gray-400"> — {{ t('participatePRDesc') }}</span>
-              </div>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="w-6 h-6 rounded-full bg-brand-teal/20 text-brand-teal flex items-center justify-center text-sm shrink-0 mt-0.5">2</span>
-              <div>
-                <span class="font-medium">{{ t('participateBug') }}</span>
-                <span class="text-gray-400"> — {{ t('participateBugDesc') }}</span>
-              </div>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="w-6 h-6 rounded-full bg-brand-teal/20 text-brand-teal flex items-center justify-center text-sm shrink-0 mt-0.5">3</span>
-              <div>
-                <span class="font-medium">{{ t('participateFeature') }}</span>
-                <span class="text-gray-400"> — {{ t('participateFeatureDesc') }}</span>
-              </div>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="w-6 h-6 rounded-full bg-brand-teal/20 text-brand-teal flex items-center justify-center text-sm shrink-0 mt-0.5">4</span>
-              <div>
-                <span class="font-medium">{{ t('participateCore') }}</span>
-                <span class="text-gray-400"> — {{ t('participateCoreDesc') }}</span>
+                <span class="font-medium" style="color: #faf8f4;">{{ item.title }}</span>
+                <span style="color: #998e80;"> — {{ item.desc }}</span>
               </div>
             </li>
           </ul>
-          <a :href="config.links.github" target="_blank" class="inline-flex items-center justify-center w-full px-8 py-3 mt-6 rounded-full border-2 border-brand-teal text-brand-teal font-semibold text-base hover:bg-brand-teal hover:text-brand-dark transition-all duration-300">
+          <a :href="config.links.github" target="_blank" class="inline-flex items-center justify-center w-full px-8 py-3 mt-6 rounded-xl border-2 font-semibold text-base transition-all duration-300" style="border-color: #2a7d6f; color: #3a9e8c;">
             {{ t('participateGithub') }}
           </a>
         </div>

@@ -4,10 +4,10 @@ import stats from '../data/stats.json'
 import { t } from '../lib/i18n.js'
 
 const items = computed(() => [
-  { label: t('statsProjects'), value: stats.totalProjects, icon: '📦' },
-  { label: t('statsLive'), value: stats.liveProjects, icon: '🟢' },
-  { label: t('statsRequests'), value: stats.communityRequests, icon: '💡' },
-  { label: t('statsContributors'), value: stats.contributors, icon: '👥' },
+  { label: t('statsProjects'), value: stats.totalProjects, icon: '📦', color: '#e65c2e' },
+  { label: t('statsLive'), value: stats.liveProjects, icon: '🟢', color: '#2a7d6f' },
+  { label: t('statsRequests'), value: stats.communityRequests, icon: '💡', color: '#3d5a9e' },
+  { label: t('statsContributors'), value: stats.contributors, icon: '👥', color: '#e65c2e' },
 ])
 
 const displayed = ref(items.value.map(() => 0))
@@ -44,15 +44,21 @@ onMounted(() => {
 </script>
 
 <template>
-  <section ref="sectionRef" class="py-20 px-6 bg-white">
-    <div class="max-w-4xl mx-auto">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-        <div v-for="(item, i) in items" :key="i" class="text-center p-6">
-          <div class="text-3xl mb-2">{{ item.icon }}</div>
-          <div class="text-4xl md:text-5xl font-bold text-brand-dark mb-1">
+  <section ref="sectionRef" class="py-20 px-6" style="background: #f0ece4;">
+    <div class="max-w-5xl mx-auto">
+      <!-- Varied layout, NOT identical grid -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div v-for="(item, i) in items" :key="i"
+             class="p-6 rounded-xl text-left border-2"
+             :class="i === 0 ? 'md:col-span-2 md:row-span-1' : ''"
+             style="border-color: #d9d0c3; background: #fffcf7;">
+          <div class="text-2xl mb-3">{{ item.icon }}</div>
+          <div class="font-bold tabular-nums mb-1"
+               :class="i === 0 ? 'text-5xl md:text-6xl' : 'text-4xl md:text-5xl'"
+               :style="{ color: item.color, fontFamily: 'Sora, sans-serif' }">
             {{ displayed[i] }}
           </div>
-          <div class="text-sm text-gray-400">{{ item.label }}</div>
+          <div class="text-sm" style="color: #6d6358;">{{ item.label }}</div>
         </div>
       </div>
     </div>

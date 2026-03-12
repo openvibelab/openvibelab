@@ -1,5 +1,5 @@
 <template>
-  <button @click="toggle" class="px-2 py-1 text-sm rounded border border-slate-300 hover:bg-slate-100 transition-colors">
+  <button @click="toggle" class="px-3 py-1.5 text-sm rounded-lg border-2 transition-colors font-medium" style="border-color: #d9d0c3; color: #6d6358; background: #fffcf7;" @mouseenter="$el.style.borderColor='#e65c2e'; $el.style.color='#e65c2e'" @mouseleave="$el.style.borderColor='#d9d0c3'; $el.style.color='#6d6358'">
     {{ locale === 'en' ? '中文' : 'EN' }}
   </button>
 </template>
